@@ -25,6 +25,8 @@ public class ContainerTests
             registry.IncludeRegistry<KnownAspNetCoreDependencies>();
         });
 
+        //container.GetInstance<Foo>("named dependency");
+
         // act && assert
         container.AssertConfigurationIsValid();
     }

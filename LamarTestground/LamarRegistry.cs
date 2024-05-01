@@ -6,8 +6,8 @@ public class LamarRegistry : ServiceRegistry
 {
     public LamarRegistry()
     {
-        For<ITestClass>().Use<TestClass>();
+        For<ITestClass>().Use<TestClass>().Ctor<Foo>().Named("a");
 
-        For<Foo>().Use<Foo>();
+        For<Foo>().Use<Foo>().Named("a");
     }
 }
