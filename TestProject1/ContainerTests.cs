@@ -30,7 +30,7 @@ public class ContainerTests
     }
 
     [Fact]
-    public async Task VerifyContainerConfiguration()
+    public async Task VerifyContainerConfiguration_Instances()
     {
         var container = new Container(registry =>
         {
