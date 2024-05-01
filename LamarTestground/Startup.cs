@@ -16,7 +16,6 @@ public class Startup
         services.AddTransient<TestClass>();
 
         services.Configure<TestOptions>(Configuration);
-
     }
 
     public void Configure(IApplicationBuilder app)
