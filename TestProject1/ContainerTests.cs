@@ -25,13 +25,11 @@ public class ContainerTests
             registry.IncludeRegistry<KnownAspNetCoreDependencies>();
         });
 
-        //container.GetInstance<Foo>("named dependency");
-
         // act && assert
         container.AssertConfigurationIsValid();
     }
 
-    [Fact(Skip = "Validate later")]
+    [Fact]
     public async Task VerifyContainerConfiguration_Instances()
     {
         var container = new Container(registry =>

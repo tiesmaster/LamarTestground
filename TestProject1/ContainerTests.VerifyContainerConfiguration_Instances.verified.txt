@@ -1,6 +1,25 @@
 ﻿[
   {
     Instance: {
+      Constructor: Foo.ctor(),
+      ResolverBaseType: TransientResolver<T>,
+      IsOnlyOneOfServiceType: true,
+      IsExplicitlyNamed: false,
+      ServiceType: Foo,
+      ImplementationType: Foo,
+      Lifetime: Transient,
+      Name: foo,
+      HasPlanned: true,
+      PlanningSucceeded: true,
+      IsDefault: true
+    },
+    Lifetime: Transient,
+    Name: foo,
+    ImplementationType: Foo,
+    ServiceType: Foo
+  },
+  {
+    Instance: {
       IsOnlyOneOfServiceType: true,
       IsExplicitlyNamed: false,
       ServiceType: IContainer,
@@ -86,7 +105,7 @@
     Instance: {
       ErrorMessages: [        
 Cannot fill the dependencies of any of the public constructors
-Available constructors:new TestClass(IOptions<LamarTestground.TestOptions> options)
+Available constructors:new TestClass(IOptions<LamarTestground.TestOptions> options, Foo dep)
 * IOptions<LamarTestground.TestOptions> is not registered within this container and cannot be auto discovered by any missing family policy
 
       ],
