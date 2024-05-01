@@ -4,17 +4,17 @@
       Constructor: Foo.ctor(),
       ResolverBaseType: TransientResolver<T>,
       IsOnlyOneOfServiceType: true,
-      IsExplicitlyNamed: false,
+      IsExplicitlyNamed: true,
       ServiceType: Foo,
       ImplementationType: Foo,
       Lifetime: Transient,
-      Name: foo,
+      Name: a,
       HasPlanned: true,
       PlanningSucceeded: true,
       IsDefault: true
     },
     Lifetime: Transient,
-    Name: foo,
+    Name: a,
     ImplementationType: Foo,
     ServiceType: Foo
   },
@@ -108,6 +108,24 @@ Cannot fill the dependencies of any of the public constructors
 Available constructors:new TestClass(IOptions<LamarTestground.TestOptions> options, Foo dep)
 * IOptions<LamarTestground.TestOptions> is not registered within this container and cannot be auto discovered by any missing family policy
 
+      ],
+      InlineDependencies: [
+        {
+          Factory: {
+            Type: Func<IServiceContext, Foo>,
+            Target: DependencyExpression<Foo>.<>c__DisplayClass11_0,
+            Method: LamarTestground.Foo Named(Lamar.IServiceContext)
+          },
+          IsOnlyOneOfServiceType: false,
+          IsExplicitlyNamed: false,
+          ServiceType: Foo,
+          ImplementationType: Foo,
+          Lifetime: Transient,
+          Name: Foo,
+          HasPlanned: false,
+          PlanningSucceeded: false,
+          IsDefault: false
+        }
       ],
       ResolverBaseType: TransientResolver<T>,
       IsOnlyOneOfServiceType: true,
