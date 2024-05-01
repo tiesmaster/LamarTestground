@@ -1,13 +1,11 @@
-using Lamar.Microsoft.DependencyInjection;
-
 using LamarTestground;
 
 var builder = CreateHostBuilder(args);
 
-builder.UseLamar(registry =>
-{
-    registry.IncludeRegistry<LamarRegistry>();
-});
+//builder.UseLamar(registry =>
+//{
+//    registry.IncludeRegistry<LamarRegistry>();
+//});
 
 builder
     .Build()

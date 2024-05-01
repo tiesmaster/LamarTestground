@@ -2,7 +2,7 @@
 
 namespace LamarTestground;
 
-public class TestClass
+public class TestClass : ITestClass
 {
     public TestClass(IOptions<TestOptions> options)
     {
@@ -10,4 +10,6 @@ public class TestClass
     }
 
     public TestOptions Options { get; }
+
+    public string Greeting => Options.MyProperty;
 }

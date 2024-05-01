@@ -4,12 +4,12 @@ namespace LamarTestground.Pages
 {
     public class IndexModel : PageModel
     {
-        public IndexModel(TestClass testClass)
+        public IndexModel(ITestClass testClass)
         {
             TestClass = testClass;
         }
 
-        public TestClass TestClass { get; }
+        public ITestClass TestClass { get; }
 
         public void OnGet()
         {
