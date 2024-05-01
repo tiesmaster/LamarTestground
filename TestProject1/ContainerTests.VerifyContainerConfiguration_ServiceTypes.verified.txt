@@ -1,0 +1,249 @@
+﻿[
+  {
+    ServiceType: IServiceContext,
+    Default: {
+      Instance: {
+        IsOnlyOneOfServiceType: true,
+        IsExplicitlyNamed: false,
+        ServiceType: IServiceContext,
+        ImplementationType: IServiceContext,
+        Lifetime: Scoped,
+        Name: IServiceContext,
+        HasPlanned: true,
+        PlanningSucceeded: true,
+        IsDefault: true
+      },
+      Lifetime: Scoped,
+      Name: IServiceContext,
+      ImplementationType: IServiceContext,
+      ServiceType: IServiceContext
+    },
+    Instances: [
+      {
+        Instance: {
+          IsOnlyOneOfServiceType: true,
+          IsExplicitlyNamed: false,
+          ServiceType: IServiceContext,
+          ImplementationType: IServiceContext,
+          Lifetime: Scoped,
+          Name: IServiceContext,
+          HasPlanned: true,
+          PlanningSucceeded: true,
+          IsDefault: true
+        },
+        Lifetime: Scoped,
+        Name: IServiceContext,
+        ImplementationType: IServiceContext,
+        ServiceType: IServiceContext
+      }
+    ]
+  },
+  {
+    ServiceType: IOptions<TestOptions>
+  },
+  {
+    ServiceType: IServiceScopeFactory,
+    Default: {
+      Instance: {
+        IsOnlyOneOfServiceType: true,
+        IsExplicitlyNamed: false,
+        ServiceType: IServiceScopeFactory,
+        ImplementationType: IServiceScopeFactory,
+        Name: IServiceScopeFactory,
+        HasPlanned: true,
+        PlanningSucceeded: true,
+        IsDefault: true
+      },
+      Name: IServiceScopeFactory,
+      ImplementationType: IServiceScopeFactory,
+      ServiceType: IServiceScopeFactory
+    },
+    Instances: [
+      {
+        Instance: {
+          IsOnlyOneOfServiceType: true,
+          IsExplicitlyNamed: false,
+          ServiceType: IServiceScopeFactory,
+          ImplementationType: IServiceScopeFactory,
+          Name: IServiceScopeFactory,
+          HasPlanned: true,
+          PlanningSucceeded: true,
+          IsDefault: true
+        },
+        Name: IServiceScopeFactory,
+        ImplementationType: IServiceScopeFactory,
+        ServiceType: IServiceScopeFactory
+      }
+    ]
+  },
+  {
+    ServiceType: ITestClass,
+    Default: {
+      Instance: {
+        ErrorMessages: [          
+Cannot fill the dependencies of any of the public constructors
+Available constructors:new TestClass(IOptions<LamarTestground.TestOptions> options)
+* IOptions<LamarTestground.TestOptions> is not registered within this container and cannot be auto discovered by any missing family policy
+
+        ],
+        ResolverBaseType: TransientResolver<T>,
+        IsOnlyOneOfServiceType: true,
+        IsExplicitlyNamed: false,
+        ServiceType: ITestClass,
+        ImplementationType: TestClass,
+        Lifetime: Transient,
+        Name: testClass,
+        HasPlanned: true,
+        PlanningSucceeded: false,
+        IsDefault: true
+      },
+      Lifetime: Transient,
+      Name: testClass,
+      ImplementationType: TestClass,
+      ServiceType: ITestClass
+    },
+    Instances: [
+      {
+        Instance: {
+          ErrorMessages: [            
+Cannot fill the dependencies of any of the public constructors
+Available constructors:new TestClass(IOptions<LamarTestground.TestOptions> options)
+* IOptions<LamarTestground.TestOptions> is not registered within this container and cannot be auto discovered by any missing family policy
+
+          ],
+          ResolverBaseType: TransientResolver<T>,
+          IsOnlyOneOfServiceType: true,
+          IsExplicitlyNamed: false,
+          ServiceType: ITestClass,
+          ImplementationType: TestClass,
+          Lifetime: Transient,
+          Name: testClass,
+          HasPlanned: true,
+          PlanningSucceeded: false,
+          IsDefault: true
+        },
+        Lifetime: Transient,
+        Name: testClass,
+        ImplementationType: TestClass,
+        ServiceType: ITestClass
+      }
+    ]
+  },
+  {
+    ServiceType: Scope,
+    Default: {
+      Instance: {
+        IsOnlyOneOfServiceType: true,
+        IsExplicitlyNamed: false,
+        ServiceType: Scope,
+        ImplementationType: Scope,
+        Lifetime: Scoped,
+        Name: Scope,
+        HasPlanned: true,
+        PlanningSucceeded: true,
+        IsDefault: true
+      },
+      Lifetime: Scoped,
+      Name: Scope,
+      ImplementationType: Scope,
+      ServiceType: Scope
+    },
+    Instances: [
+      {
+        Instance: {
+          IsOnlyOneOfServiceType: true,
+          IsExplicitlyNamed: false,
+          ServiceType: Scope,
+          ImplementationType: Scope,
+          Lifetime: Scoped,
+          Name: Scope,
+          HasPlanned: true,
+          PlanningSucceeded: true,
+          IsDefault: true
+        },
+        Lifetime: Scoped,
+        Name: Scope,
+        ImplementationType: Scope,
+        ServiceType: Scope
+      }
+    ]
+  },
+  {
+    ServiceType: IServiceProvider,
+    Default: {
+      Instance: {
+        IsOnlyOneOfServiceType: true,
+        IsExplicitlyNamed: false,
+        ServiceType: IServiceProvider,
+        ImplementationType: IServiceProvider,
+        Lifetime: Scoped,
+        Name: IServiceProvider,
+        HasPlanned: true,
+        PlanningSucceeded: true,
+        IsDefault: true
+      },
+      Lifetime: Scoped,
+      Name: IServiceProvider,
+      ImplementationType: IServiceProvider,
+      ServiceType: IServiceProvider
+    },
+    Instances: [
+      {
+        Instance: {
+          IsOnlyOneOfServiceType: true,
+          IsExplicitlyNamed: false,
+          ServiceType: IServiceProvider,
+          ImplementationType: IServiceProvider,
+          Lifetime: Scoped,
+          Name: IServiceProvider,
+          HasPlanned: true,
+          PlanningSucceeded: true,
+          IsDefault: true
+        },
+        Lifetime: Scoped,
+        Name: IServiceProvider,
+        ImplementationType: IServiceProvider,
+        ServiceType: IServiceProvider
+      }
+    ]
+  },
+  {
+    ServiceType: IContainer,
+    Default: {
+      Instance: {
+        IsOnlyOneOfServiceType: true,
+        IsExplicitlyNamed: false,
+        ServiceType: IContainer,
+        ImplementationType: IContainer,
+        Lifetime: Scoped,
+        Name: IContainer,
+        HasPlanned: true,
+        PlanningSucceeded: true,
+        IsDefault: true
+      },
+      Lifetime: Scoped,
+      Name: IContainer,
+      ImplementationType: IContainer,
+      ServiceType: IContainer
+    },
+    Instances: [
+      {
+        Instance: {
+          IsOnlyOneOfServiceType: true,
+          IsExplicitlyNamed: false,
+          ServiceType: IContainer,
+          ImplementationType: IContainer,
+          Lifetime: Scoped,
+          Name: IContainer,
+          HasPlanned: true,
+          PlanningSucceeded: true,
+          IsDefault: true
+        },
+        Lifetime: Scoped,
+        Name: IContainer,
+        ImplementationType: IContainer,
+        ServiceType: IContainer
+      }
+    ]
+  }
+]

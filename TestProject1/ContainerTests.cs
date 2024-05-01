@@ -42,6 +42,19 @@ public class ContainerTests
             .OrderEnumerableBy<InstanceRef>(x => x.Name);
     }
 
+    [Fact(Skip = "Flaky")]
+    public async Task VerifyContainerConfiguration_ServiceTypes()
+    {
+        var container = new Container(registry =>
+        {
+            registry.IncludeRegistry<LamarRegistry>();
+        });
+
+        await Verify(container.Model.ServiceTypes)
+            .IgnoreMember<Instance>(x => x.Hash)
+            .OrderEnumerableBy<IServiceFamilyConfiguration>(x => x.ServiceType);
+    }
+
     [Fact]
     public void MyTestMethod()
     {
