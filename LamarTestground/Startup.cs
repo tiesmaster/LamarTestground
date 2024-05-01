@@ -13,7 +13,7 @@ public class Startup
     {
         services.AddRazorPages();
 
-        services.AddTransient<ITestClass, TestClass>();
+        //services.AddTransient<ITestClass, TestClass>();
 
         services.Configure<TestOptions>(Configuration);
     }
