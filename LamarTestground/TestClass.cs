@@ -4,7 +4,7 @@ namespace LamarTestground;
 
 public class TestClass : ITestClass
 {
-    public TestClass(IOptions<TestOptions> options)
+    public TestClass(IOptions<TestOptions> options, Foo dep)
     {
         Options = options.Value;
     }
@@ -12,4 +12,8 @@ public class TestClass : ITestClass
     public TestOptions Options { get; }
 
     public string Greeting => Options.MyProperty;
+}
+
+public class Foo
+{
 }
