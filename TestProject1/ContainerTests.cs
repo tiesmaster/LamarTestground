@@ -9,6 +9,8 @@ using Microsoft.Extensions.Options;
 
 using NSubstitute;
 
+using Shouldly;
+
 using static Lamar.ServiceRegistry;
 
 namespace TestProject1;
@@ -28,6 +30,40 @@ public class ContainerTests
 
         // act && assert
         container.AssertConfigurationIsValid();
+    }
+
+    [Fact]
+    public void MyTestMethod()
+    {
+        //typeof(int).GetGenericTypeDefinition();
+
+        var ti = typeof(int);
+
+        (ti.IsGenericType && ti.GetGenericTypeDefinition() != null).ShouldBeFalse();
+    }
+
+    [Fact]
+    public void MyTestMethod2()
+    {
+        typeof(List<int>).GetGenericTypeDefinition();
+
+        typeof(List<int>).IsGenericType.ShouldBeTrue();
+        typeof(List<int>).IsGenericTypeDefinition.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void MyTestMethod3()
+    {
+        typeof(List<>).GetGenericTypeDefinition();
+
+        var lo = typeof(List<>);
+
+        lo.IsGenericType.ShouldBeTrue();
+        lo.IsGenericTypeDefinition.ShouldBeTrue();
+
+        lo.ShouldBe(lo);
+
+        lo.GetGenericTypeDefinition().ShouldBe(lo);
     }
 }
 
