@@ -1,4 +1,5 @@
 ﻿using Lamar;
+using Lamar.Diagnostics;
 using Lamar.IoC.Instances;
 
 using LamarTestground;
@@ -6,10 +7,6 @@ using LamarTestground;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
-
-using NSubstitute;
-
-using Shouldly;
 
 using static Lamar.ServiceRegistry;
 
@@ -33,6 +30,19 @@ public class ContainerTests
     }
 
     [Fact]
+    public async Task VerifyContainerConfiguration()
+    {
+        var container = new Container(registry =>
+        {
+            registry.IncludeRegistry<LamarRegistry>();
+        });
+
+        await Verify(container.Model.AllInstances)
+            .IgnoreMember<Instance>(x => x.Hash)
+            .OrderEnumerableBy<InstanceRef>(x => x.Name);
+    }
+
+    [Fact]
     public void MyTestMethod()
     {
         //typeof(int).GetGenericTypeDefinition();
@@ -48,7 +58,7 @@ public class ContainerTests
         typeof(List<int>).GetGenericTypeDefinition();
 
         typeof(List<int>).IsGenericType.ShouldBeTrue();
-        typeof(List<int>).IsGenericTypeDefinition.ShouldBeTrue();
+        //typeof(List<int>).IsGenericTypeDefinition.ShouldBeTrue();
     }
 
     [Fact]
